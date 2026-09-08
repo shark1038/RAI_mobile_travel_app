@@ -1,6 +1,5 @@
 <h1 align="center">✈️ Full-Stack AI Trip Planner Mobile App ✈️</h1>
 
-![Demo App](/assets/images/screenshot-for-readme.png)
 
 ✨ **Highlights:**
 
