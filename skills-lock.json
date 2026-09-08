@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "clerk": {
+      "source": "clerk/skills",
+      "sourceType": "github",
+      "skillPath": "skills/core/clerk/SKILL.md",
+      "computedHash": "2ec160843e0e4d4a46d46f9442f5dc97d82055384189881e80d128c090651bb7"
+    },
+    "clerk-expo": {
+      "source": "clerk/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mobile/clerk-expo/SKILL.md",
+      "computedHash": "f880c1ef1ed1c5740aaa984514cefe1c8e8f2edd4209bbbac6abc67c10726b55"
+    },
+    "clerk-expo-patterns": {
+      "source": "clerk/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frameworks/clerk-expo-patterns/SKILL.md",
+      "computedHash": "ef550f902d44c3292db0578409aed0729075ea559ed77bb98b294c8c7114599a"
+    },
+    "clerk-setup": {
+      "source": "clerk/skills",
+      "sourceType": "github",
+      "skillPath": "skills/core/clerk-setup/SKILL.md",
+      "computedHash": "a35fe4e4d03a71825d9880c9cd76ddcae536beed535a2be44908117b4661e749"
+    }
+  }
+}

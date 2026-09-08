@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  PRIVACY POLICY — DRAFT (pending qualified legal/privacy review before publish)
+  ----------------------------------------------------------------------------
+  Written to match what the Triply codebase actually collects and shares.
+  Bracketed [PLACEHOLDERS] mark decisions that MUST be confirmed:
+    [LEGAL ENTITY] [DATA CONTROLLER ADDRESS] [GOVERNING JURISDICTION]
+    [MINIMUM AGE] [EFFECTIVE DATE] [RETENTION PERIOD] [PRIVACY CONTACT]
+  KEY REVIEW FLAGS (see reviewer notes at bottom):
+   - Sentry is configured with sendDefaultPii:true, UNMASKED session replay,
+     and receives AI chat message content + trip destinations. This is broad
+     collection that must be disclosed AND is worth reconsidering in code.
+   - User-uploaded cover images are NOT deleted from ImageKit on account/trip
+     deletion; the "we delete your data" promise is only DB-complete today.
+   - No data-export/DSAR flow exists in code; rights below are partly manual.
+  Have a qualified attorney review before publication. Not legal advice.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Triply</title>
+  <meta name="description" content="How Triply collects, uses, stores, and shares your personal data." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <span class="globe">
+          <img src="logo.png" alt="Triply logo" width="26" height="26" />
+        </span>
+        Triply
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="store sm" href="index.html">
+          <span class="st"><small>Back to</small><span>Home</span></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: [EFFECTIVE DATE] &middot; This policy explains what data Triply collects and how we use it.</p>
+
+    <p>This Privacy Policy describes how [LEGAL ENTITY] ("<strong>Triply</strong>," "<strong>we</strong>,"
+      "<strong>us</strong>") collects, uses, stores, and shares personal data when you use the Triply
+      mobile app (the "<strong>Service</strong>"). It covers the app itself; our marketing website
+      collects no personal data and sets no cookies or trackers. By using the Service, you agree to the
+      practices described here.</p>
+
+    <h2>1. Data we collect</h2>
+
+    <h3>Account and identity data</h3>
+    <p>You sign in with Google or Apple through our authentication provider, Clerk. When you do, we
+      receive and store a user identifier, your email address, your name, and your profile image URL as
+      provided by that sign-in provider. We do not receive or store a password — sign-in is handled
+      entirely by Google, Apple, and Clerk.</p>
+
+    <h3>Trip and content data</h3>
+    <p>When you plan a trip, we collect the inputs you provide: destination, travel dates, number of
+      days and travelers, budget level, interests, and pace. We store the AI-generated itinerary, budget
+      estimate, and cover image associated with each trip. If you choose to set a custom cover image, we
+      access the photo you select from your device's photo library and upload it to our image host. We
+      also store the messages you send to, and receive from, the AI travel assistant and the trip-refine
+      chat.</p>
+
+    <h3>Usage data</h3>
+    <p>We keep a simple per-day counter of how many trips you generate, to enforce an anti-abuse limit.</p>
+
+    <h3>Diagnostic, telemetry, and session-replay data</h3>
+    <p>To monitor errors and performance, the app uses Sentry, which automatically collects diagnostic
+      data about your use of the app. As currently configured, this includes:</p>
+    <ul>
+      <li>technical event and performance data, and your <strong>IP address</strong> and related request
+        context;</li>
+      <li>structured logs of certain in-app actions — for example, that a trip generation started
+        (including the <strong>destination</strong> you entered) and that a sign-in occurred (including
+        which provider you used);</li>
+      <li>for AI assistant conversations, monitoring data that includes the <strong>content of the
+        messages</strong> you send to the assistant and the assistant's replies;</li>
+      <li><strong>session replays</strong> for a sample of app sessions and for sessions where an error
+        occurs. These replays can capture on-screen text and images, because screen masking is not
+        enabled.</li>
+    </ul>
+    <p>Diagnostic data is processed by Sentry on our behalf and is currently sent to Sentry's European
+      Union region.</p>
+
+    <h3>Data we do <em>not</em> collect</h3>
+    <p>The app does not collect your precise location or GPS coordinates, does not use advertising or
+      marketing analytics or ad-tracking SDKs, does not build an advertising profile of you, does not
+      send push notifications, and does not process any payment or financial information (the Service is
+      free and contains no payment functionality). Map locations shown in the app are AI-estimated points
+      of interest, not your location.</p>
+
+    <h2>2. How we use your data</h2>
+    <ul>
+      <li>to authenticate you and provide access to your account;</li>
+      <li>to generate, store, display, and let you refine your trips and itineraries;</li>
+      <li>to operate the AI travel assistant;</li>
+      <li>to enforce usage limits and protect the Service against abuse;</li>
+      <li>to monitor, debug, secure, and improve the Service (error tracking, performance, and session
+        diagnostics);</li>
+      <li>to communicate with you about support requests you send us.</li>
+    </ul>
+    <p>We do not sell your personal data, and we do not use it for third-party advertising.</p>
+
+    <h2>3. AI processing of your inputs</h2>
+    <p>To generate itineraries and assistant replies, we send your trip inputs and your chat messages to
+      our AI provider, OpenAI, which processes them to produce responses. Please avoid sending sensitive
+      personal information in chat messages or trip inputs, as this content is transmitted to OpenAI and
+      stored by us as part of your trips and transcripts. OpenAI's handling of this data is governed by
+      its own terms and privacy commitments.</p>
+
+    <h2>4. Third-party services that process your data</h2>
+    <p>We rely on the following service providers ("processors" / "sub-processors") to run the Service.
+      Each receives only the data needed for its function and processes it under its own terms and
+      privacy policy:</p>
+    <ul>
+      <li><strong>Clerk</strong> — authentication and account identity (identifier, email, name, avatar);</li>
+      <li><strong>Google / Apple</strong> — sign-in providers that authenticate you and share basic
+        profile data;</li>
+      <li><strong>OpenAI</strong> — receives your trip inputs and chat messages to generate itineraries
+        and assistant responses;</li>
+      <li><strong>Neon</strong> — hosts the database where your account, trips, and chats are stored;</li>
+      <li><strong>ImageKit</strong> — hosts and delivers trip cover images, including any image you
+        upload;</li>
+      <li><strong>Unsplash</strong> — receives your destination as a search query to supply stock cover
+        photos;</li>
+      <li><strong>Inngest</strong> — runs background jobs that generate trips and sync account changes;</li>
+      <li><strong>Sentry</strong> — receives the diagnostic, telemetry, and session-replay data described
+        in Section&nbsp;1;</li>
+      <li><strong>Apple Maps</strong> (via the device) — renders map locations of suggested places;</li>
+      <li><strong>Expo</strong> — the underlying app runtime and platform.</li>
+    </ul>
+
+    <h2>5. How your data is stored and secured</h2>
+    <p>Your account and trip data are stored in our hosted Postgres database (Neon). Uploaded and stock
+      cover images are stored with our image host (ImageKit). We apply reasonable technical measures,
+      including: encrypted connections (HTTPS/TLS) for data in transit; short-lived signed session tokens
+      that are verified on every request and stored in your device's secure storage (the device keychain);
+      signature verification of incoming account webhooks; and access scoping so that queries return only
+      the data belonging to the authenticated account. No method of transmission or storage is completely
+      secure, and we cannot guarantee absolute security.</p>
+
+    <h2>6. Data retention</h2>
+    <p>We keep your account and trip data for as long as your account exists, and until you delete it or
+      your account. When you delete your account, we delete your account record and associated trips,
+      itineraries, and chats from our database. [Confirm retention periods — the code does not currently
+      define fixed retention windows.] Some copies may persist for a limited time in backups or with
+      third-party processors (for example, uploaded images retained by our image host, or diagnostic data
+      retained by Sentry and content retained by OpenAI) under those providers' own retention policies.</p>
+
+    <h2>7. Your rights and choices</h2>
+    <p>Within the app, you can:</p>
+    <ul>
+      <li><strong>Delete your account and all associated data</strong> from the Profile screen. This is
+        permanent and cannot be undone.</li>
+      <li><strong>Delete individual trips</strong> (which also removes their chat messages).</li>
+      <li><strong>Clear your AI assistant chat history.</strong></li>
+      <li><strong>Sign out</strong> at any time.</li>
+    </ul>
+    <p>Depending on where you live, you may also have rights to access, correct, export, restrict, or
+      object to the processing of your personal data, and to withdraw consent. Some of these are not yet
+      self-service in the app; to exercise them, contact us at the address in Section&nbsp;11 and we will
+      respond as required by applicable law. [If you serve EU/UK or California residents, confirm the
+      applicable legal bases, GDPR/CCPA rights, and any "Do Not Sell/Share" statement — noting we do not
+      sell personal data.]</p>
+
+    <h2>8. International data transfers</h2>
+    <p>Our providers may process and store data in countries other than yours, including the United States
+      and the European Union. Where required, transfers are made under appropriate safeguards.
+      [Confirm the specific transfer mechanism(s) and provider regions with counsel.]</p>
+
+    <h2>9. Children's privacy</h2>
+    <p>The Service is not directed to children and is intended for users aged [MINIMUM AGE] and over. We do
+      not knowingly collect personal data from children under that age. If you believe a child has
+      provided us personal data, contact us and we will delete it.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated"
+      date above and, where appropriate, provide additional notice. Your continued use of the Service
+      after changes take effect means you accept the updated policy.</p>
+
+    <h2>11. Contact us</h2>
+    <p>For privacy questions or to exercise your rights, contact us at
+      <a href="mailto:support@triply.com">support@triply.com</a>, or [LEGAL ENTITY], [DATA CONTROLLER
+      ADDRESS]. This policy is governed by the laws of [GOVERNING JURISDICTION].</p>
+
+    <p class="updated" style="margin-top:40px">This document is a draft and should be reviewed by a
+      qualified attorney or privacy professional in your jurisdiction before publication. It is not legal
+      advice.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html">
+        <span class="globe">
+          <img src="logo.png" alt="Triply logo" width="24" height="24" />
+        </span>
+        Triply
+      </a>
+      <nav class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@triply.com">support@triply.com</a>
+      </nav>
+      <div class="copy">© 2026 Triply. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

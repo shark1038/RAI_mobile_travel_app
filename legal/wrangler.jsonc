@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static-assets deployment for the Triply legal/marketing pages.
+  // Assets-only worker (no server script): serves the HTML/CSS/images directly.
+  "name": "triply-legal",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "."
+  }
+}
